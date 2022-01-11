@@ -9,4 +9,9 @@
     <string name="login">Login</string>
     <string name="user">User</string>
     <string name="password">Password</string>
+    <string name="nama">nama user</string>
+    <string name="opsi">Opsi Scan</string>
+    <string name="scanQR">Scan QR</string>
+    <string name="scanBarcode">Scan Barcode</string>
+    <string name="unlock">Buka Kunci</string>
 </resources>

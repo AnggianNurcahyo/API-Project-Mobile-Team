@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DWUtilities.CreateDWProfile(this);
-        Button btnScan = findViewById(R.id.btnScan);
-        btnScan.setOnTouchListener(this);
+        Button btnScan = findViewById(R.id.btnReset);        //DIGANTI BUTTON UNTUK RESET
+        btnScan.setOnTouchListener(this);                   //UBAH ISILISTENER
     }
 
     @Override

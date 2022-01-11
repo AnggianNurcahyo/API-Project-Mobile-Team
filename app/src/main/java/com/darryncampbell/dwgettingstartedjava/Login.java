@@ -1,6 +1,5 @@
 package com.darryncampbell.dwgettingstartedjava;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,20 +22,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         etUsername = findViewById(R.id.userLog);
         etPassword = findViewById(R.id.passwordLog);
 
-        btnLogin = findViewById(R.id.btnSplashLogin);
-        btnLogin.setOnClickListener(this);
+        btnLogin = findViewById(R.id.btnReset);
 
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnSplashLogin:
-                Username = etUsername.getText().toString();
-                Password = etPassword.getText().toString();
-                login(Username,Password);
-                break;
-        }
+    public void onClick(View view) {
+
     }
-
-
+}

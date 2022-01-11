@@ -15,26 +15,25 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/cv_img"
+            android:id="@+id/logo"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
-            app:srcCompat="@drawable/back"
+            android:src="@drawable/kembali"
             android:layout_gravity="center"/>
-
 
         <ImageView
             android:id="@+id/cv_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
-            app:srcCompat="@drawable/logo_pt"
+            app:srcCompat="@drawable/logo"
             android:layout_weight="1"
-            android:layout_marginLeft="250dp"/>
+            android:layout_marginStart="250dp"/>
 
     </LinearLayout>
 
@@ -42,7 +41,7 @@
         android:id="@+id/petunjuk1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kode Kanban akan muncul setelah scan"
+        android:text="@string/hint1"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
@@ -54,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Kode kanban ter-scan"
+        android:text="@string/hint"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.029"
@@ -76,48 +75,28 @@
             android:id="@+id/txtOutput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Kode Kanban"
-            android:textStyle="bold" />
+            android:text="@string/kode_kanban"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
 
     </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnReset"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="RESET"
+        android:text="@string/reset"
         android:textColor="@color/white"
-        android:backgroundTint="@color/black"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-    <!--<ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnScan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/txtOutput"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

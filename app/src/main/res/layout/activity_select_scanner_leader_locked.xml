@@ -17,9 +17,16 @@
         android:paddingBottom="10dp"
         tools:ignore="MissingConstraints">
 
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/logout"
+            android:layout_gravity="center_vertical"/>
+
         <TextView
             android:id="@+id/nama_user"
-            android:layout_width="300dp"
+            android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
@@ -48,16 +55,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
+        android:fontFamily="@font/Arial_Rounded_MT"
         android:text="Opsi Scan"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -84,20 +92,20 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:background="#d9d9d9"
+                    android:background="@color/white"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:src="@drawable/qrcode" />
+                    android:src="@drawable/tmmin" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:text="Scan QR"
+                    android:text="@string/tmmin"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -117,20 +125,20 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:background="#d9d9d9"
+                    android:background="@color/white"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:src="@drawable/barcode" />
+                    android:src="@drawable/denso" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:text="Scan Barcode"
+                    android:text="@string/denso"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -160,7 +168,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/unlock"
         android:textColor="@color/white"
-        android:backgroundTint="@color/black"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

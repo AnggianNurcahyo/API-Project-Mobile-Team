@@ -1,5 +1,6 @@
 package com.darryncampbell.dwgettingstartedjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,7 +9,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class Login extends AppCompatActivity {
 
     EditText etUsername, etPassword;
     Button btnLogin;
@@ -27,13 +28,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Login.this, SelectScanner.class);
+                startActivity(intent);
             }
         });
-    }
-
-    @Override
-    public void onClick(View view) {
-
     }
 }

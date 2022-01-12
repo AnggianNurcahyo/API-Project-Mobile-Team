@@ -22,7 +22,8 @@
     <string name="logout">LOGOUT</string>
     <string name="status_hasil_scan_terakhir">status hasil scan terakhir</string>
     <string name="riwayat">Riwayat</string>
-    <string name="hint2">silahkan logout dan hubungi atasan untuk membuka kunci.</string>
+    <string name="hint2">silahkan logout dan hubungi leader</string>
+    <string name="hint3"> hanya leader yang dapat membuka kunci.</string>
     <string name="warning">Perangkat telah terkunci!</string>
     <string name="reset">RESET</string>
     <string name="denso">Scan Barcode</string>

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="250dp"
+    android:layout_width="200dp"
+    android:layout_height="160dp"
     android:layout_gravity="center"
     android:background="@drawable/bg_good">
 
     <ImageView
         android:id="@+id/icgood"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/checked"/>
+        android:layout_width="62dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="69dp"
+        android:src="@drawable/checked" />
 
     <TextView
         android:id="@+id/txtgood"
@@ -20,8 +23,8 @@
         android:text="GOOD"
         android:layout_below="@+id/icgood"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="36sp"
+        android:layout_marginTop="5dp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <Button

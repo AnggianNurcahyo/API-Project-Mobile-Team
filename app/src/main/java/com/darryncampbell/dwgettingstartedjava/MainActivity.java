@@ -9,15 +9,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DWUtilities.CreateDWProfile(this);
-        Button btnScan = findViewById(R.id.btnReset);        //DIGANTI BUTTON UNTUK RESET
-        btnScan.setOnTouchListener(this);                   //UBAH ISILISTENER
+        Button btnReset = findViewById(R.id.btnReset);
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, select_scanner_leader_locked.class);
+                startActivity(intent);
+            }
+        });//UBAH ISILISTENER
     }
 
     @Override
@@ -37,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         output.setText(scan + output.getText());
     }
 
-    @Override
+    /*@Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if (view.getId() == R.id.btnScan)
         {
@@ -59,5 +65,5 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             }
         }
         return true;
-    }
+    }*/
 }

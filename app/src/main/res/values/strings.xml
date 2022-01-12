@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DW Getting Started Java</string>
+    <string name="app_name">Pokayoke Apps</string>
 
     <string name="activity_intent_filter_action">com.darryncampbell.datawedge.java.ACTION</string>
 

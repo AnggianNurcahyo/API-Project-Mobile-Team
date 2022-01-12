@@ -1,7 +1,10 @@
 package com.darryncampbell.dwgettingstartedjava;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +12,18 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Login extends AppCompatActivity {
+
+    private static final String URL = "jdbc:mysql://192.168.100.65/master_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
 
     EditText etUsername, etPassword;
     Button btnLogin;
@@ -33,4 +47,33 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    @SuppressLint("StaticFieldLeak")
+    public class InfoAsyncTask extends AsyncTask<Void, Void, Map<String, String>> {
+        @Override
+        protected Map<String, String> doInBackground(Void... voids) {
+            Map<String, String> info = new HashMap<>();
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                String sql = "SELECT id, name, guard_name FROM roles";
+                PreparedStatement statement = connection.prepareStatement(sql);
+                ResultSet resultSet = statement.executeQuery();
+                if (resultSet.next()) {
+                    info.put("id", resultSet.getString("id"));
+                    info.put("name", resultSet.getString("name"));
+                    info.put("guard_name", resultSet.getString("guard_name"));
+                    Log.e("gagal data", "Data : " + resultSet.getString("name"));
+                }
+            } catch (Exception e) {
+                Log.e("InfoAsyncTask", "Error reading user", e);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Map<String, String> stringStringMap) {
+            super.onPostExecute(stringStringMap);
+        }
+    }
+
 }

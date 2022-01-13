@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="200dp"
-    android:layout_height="160dp"
+    android:layout_height="180dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center"
-    android:background="@drawable/bg_ng">
+    android:background="@drawable/bg_ng"
+    tools:context=".notif_ng">
 
     <ImageView
         android:id="@+id/icgood"
@@ -17,7 +19,7 @@
         android:src="@drawable/xicon" />
 
     <TextView
-        android:id="@+id/txtgood"
+        android:id="@+id/txtng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NOT GOOD"
@@ -28,6 +30,14 @@
         android:textSize="28sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/riwayat"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtng"/>
+
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
@@ -36,6 +46,6 @@
         android:text="LOGOUT"
         android:textColor="@color/white"
         android:backgroundTint="@color/black"
-        android:layout_below="@+id/txtgood"/>
+        android:layout_below="@+id/riwayat"/>
 
 </RelativeLayout>

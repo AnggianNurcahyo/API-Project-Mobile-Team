@@ -1,7 +1,6 @@
 package com.darryncampbell.dwgettingstartedjava;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -9,21 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DWUtilities.CreateDWProfile(this);
-        Button btnReset = findViewById(R.id.btnReset);
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, select_scanner_leader_locked.class);
-                startActivity(intent);
-            }
-        });//UBAH ISILISTENER
+        Button btnScan = findViewById(R.id.btnReset);
+        btnScan.setOnTouchListener(this);
     }
 
     @Override
@@ -35,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayScanResult(Intent scanIntent)
     {
-        String decodedSource = scanIntent.getStringExtra(getResources().getString(R.string.datawedge_intent_key_source));
+
         String decodedData = scanIntent.getStringExtra(getResources().getString(R.string.datawedge_intent_key_data));
         String decodedLabelType = scanIntent.getStringExtra(getResources().getString(R.string.datawedge_intent_key_label_type));
         String scan = decodedData + " [" + decodedLabelType + "]\n\n";
@@ -43,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         output.setText(scan + output.getText());
     }
 
-    /*@Override
+    @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if (view.getId() == R.id.btnScan)
         {
@@ -65,5 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return true;
-    }*/
+    }
 }
+

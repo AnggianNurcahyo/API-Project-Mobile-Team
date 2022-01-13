@@ -31,10 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     {
 
         String decodedData = scanIntent.getStringExtra(getResources().getString(R.string.datawedge_intent_key_data));
-        String decodedLabelType = scanIntent.getStringExtra(getResources().getString(R.string.datawedge_intent_key_label_type));
-        String scan = decodedData + " [" + decodedLabelType + "]\n\n";
+        String scan = decodedData;
         final TextView output = findViewById(R.id.txtOutput);
-        output.setText(scan + output.getText());
+        output.setText(scan);
     }
 
     @Override

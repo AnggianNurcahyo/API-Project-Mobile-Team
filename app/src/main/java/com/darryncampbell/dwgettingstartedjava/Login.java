@@ -21,9 +21,9 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
 
-    private static final String URL = "jdbc:mysql://192.168.100.97:3306/master_db";
-    private static final String USER = "anggi";
-    private static final String PASSWORD = "anggi";
+    private static final String URL = "jdbc:mysql://192.168.100.65/master_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
 
     EditText etUsername, etPassword;
     Button btnLogin;
